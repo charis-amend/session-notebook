@@ -31,6 +31,8 @@ how to link the css file to the html file
 
 #### in body we create font-family
 
+##### use rem for font-size
+
 like this
 
 <!-- body {
