@@ -1,5 +1,17 @@
 # CSS Positioning
 
+- [CSS Positioning](#css-positioning)
+  - [types of positioning](#types-of-positioning)
+  - [How to do it](#how-to-do-it)
+    - [relative](#relative)
+    - [absolute](#absolute)
+    - [fixed elements (eg header \& image)](#fixed-elements-eg-header--image)
+      - [fix the image outside of website:](#fix-the-image-outside-of-website)
+      - [operator transform: very powerful](#operator-transform-very-powerful)
+      - [einheit vw and vh](#einheit-vw-and-vh)
+    - [sticky element](#sticky-element)
+  - [flexible image webbrowser size](#flexible-image-webbrowser-size)
+
 ## types of positioning
 
 1. relative
@@ -142,4 +154,14 @@ height: hv
   height: 20px;
   z-index: 0;
 }
+```
+
+## flexible image webbrowser size
+
+```css
+.image-fluid {
+  width: 100%;
+  height: auto;
+}
+´´´
 ```

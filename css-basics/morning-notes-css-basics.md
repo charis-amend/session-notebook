@@ -1,6 +1,27 @@
 # CSS syntax
 
-#### Selector like h1
+- [CSS syntax](#css-syntax)
+  - [Selectors like h1](#selectors-like-h1)
+    - [for each page a separat css file. - one html file -\> one css file - 4 html files -\> 4 css files](#for-each-page-a-separat-css-file---one-html-file---one-css-file---4-html-files---4-css-files)
+    - [in body we create font-family](#in-body-we-create-font-family)
+      - [use rem for font-size](#use-rem-for-font-size)
+    - [in header we create margin, background and text align](#in-header-we-create-margin-background-and-text-align)
+  - [one element's structure (margin border padding etc.)](#one-elements-structure-margin-border-padding-etc)
+    - [calculate total width and height](#calculate-total-width-and-height)
+      - [complicateed:](#complicateed)
+      - [easy:](#easy)
+        - [difference margin and border](#difference-margin-and-border)
+  - [default margins when starting project](#default-margins-when-starting-project)
+  - [section structure](#section-structure)
+  - [further styling tipps](#further-styling-tipps)
+  - [input field](#input-field)
+  - [changing a style of one child in a section in main](#changing-a-style-of-one-child-in-a-section-in-main)
+  - [block elements](#block-elements)
+  - [inline element](#inline-element)
+    - [dev tools tipps](#dev-tools-tipps)
+  - [shadows](#shadows)
+
+## Selectors like h1
 
 target specific element
 if we select h1 then all the h1 header will have the same styling

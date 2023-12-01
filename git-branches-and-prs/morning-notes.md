@@ -1,5 +1,10 @@
 # morning notes for git branches
 
+- [morning notes for git branches](#morning-notes-for-git-branches)
+  - [process from yesterday](#process-from-yesterday)
+  - [process of adding branches and working in them and then merging](#process-of-adding-branches-and-working-in-them-and-then-merging)
+    - [Process](#process)
+
 ## process from yesterday
 
     1. git init
