@@ -91,6 +91,15 @@ box-sizing is... + element width and heigth + padding + border
 deleting default margins that come with browser default:
 [//]: \* {box-sizing: border-box; margin: 0; padding=0}
 
+```css
+example header element {
+  margin: 0 auto;
+}
+```
+
+-> 0 is top and bottom no space between
+-> auto is left and right - in this case of the header element auto is centering it in the middle of the page body{} (or parent element)
+
 ## section structure
 
 <!-- in html document you have created
