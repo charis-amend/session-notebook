@@ -222,3 +222,45 @@ seleting one element like h1 then click on margin and color and tick boxes
 
 if you change stuff in the browser in dev tools
 then click on the link on the right side "filename".css:"line where the change is"
+
+## shadows
+
+html file shows:
+
+<section class="skyblue">
+<button class="button3">different fonts button with inset shadow</button>
+</section>
+<section>
+<button class="button4">outside shadow button</button>
+</section>
+
+css file shows:
+
+```css
+/* button with inset shadow */
+.button3 {
+  box-sizing: border-box;
+  width: 200px;
+  height: 70px;
+  background-color: blueviolet;
+  border: 2px black dashed;
+  color: white;
+  font-size: 9px;
+  font-weight: 100;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-stretch: expanded;
+  box-shadow: inset 0px 0px 30px green;
+}
+
+/* Button with outside shadow*/
+.button4 {
+  box-sizing: border-box;
+  height: 100px;
+  width: 300px;
+  border: 10px red dotted;
+  background-color: aqua;
+  color: grey;
+  font-size: 20px;
+  box-shadow: 30px 40px 20px black;
+}
+```
