@@ -14,6 +14,10 @@
 
 ## types of positioning
 
+Specificity Calculator:
+check how different styles affect each other:
+https://specificity.keegan.st
+
 1. relative
 2. fixed
 3. sticky
