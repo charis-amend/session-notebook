@@ -21,6 +21,8 @@ therefore:
 align-items -> cross achse
 justify-content -> main achse
 
+!!! Notice that when the flex direction is a column, justify-content changes to the vertical and align-items to the horizontal.
+
 ## how to do flex box
 
 1.  change container into a flex box :
@@ -57,11 +59,15 @@ flex container element {
 4.  spread elements in th available space in container
     elements wont change size until gap is 20px is reached
 
+    use _justify-content: space-between;_
+    or
+    use _justify-content: space-around;_
+
     ```css
     flex container element {
       display: flex;
       gap: 20px;
-      justify-content: space-inbetween;
+      justify-content: space-between;
     }
     ```
 
@@ -83,7 +89,8 @@ flex container element {
     _display: flex;_
 
 7.  add spacing around the elements to use all the available space in the container
-    _justify-contnt: space-evently;_
+    _justify-contnt: space-evenly;_
+    _justify-content: space-round;_
 
 8.  select one element in container
     align-self only works on an element
@@ -118,7 +125,7 @@ flex container element {
     }
     ```
 
-10. change main achse and cross achse
+10. change main achse and cross achse FLEX DIRECTION!!
 
     _flex-direction: column-reverse;_
     applies to the elements inside the container
@@ -139,6 +146,13 @@ flex container element {
       flex-direction: reverse;
     }
     ```
+
+    Options:
+
+    1. row: Items are placed the same as the text direction.
+    2. row-reverse: Items are placed opposite to the text direction.
+    3. column: Items are placed top to bottom.
+    4. column-reverse: Items are placed bottom to top.
 
 11. make it eeven more responsive
     _flex-wrap: wrap;_
@@ -164,3 +178,11 @@ flex container element {
     ```
 
 14. whenever element is smaller than 200px the element is wraping into the next line vertically
+
+15. combination of flex-direction and flex-wrap:
+    The two properties flex-direction and flex-wrap are used so often together that the shorthand property flex-flow was created to combine them. This shorthand property accepts the value of the two properties separated by a space.
+    For example, you can use flex-flow: row wrap to set rows and wrap them.
+
+Froggy Game last example:
+
+![Alt text](frogexamplescreenshot.png)

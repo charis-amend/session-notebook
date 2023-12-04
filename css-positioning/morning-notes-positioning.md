@@ -11,6 +11,7 @@
       - [einheit vw and vh](#einheit-vw-and-vh)
     - [sticky element](#sticky-element)
   - [flexible image webbrowser size](#flexible-image-webbrowser-size)
+  - [difference between parent element {} and parent \> element {}](#difference-between-parent-element--and-parent--element-)
 
 ## types of positioning
 
@@ -169,3 +170,35 @@ height: hv
 }
 ´´´
 ```
+
+## difference between parent element {} and parent > element {}
+
+`````css
+main > p {
+}
+``` -> selecting only the direct childs of main
+
+````css
+main p {
+}
+``` -> selecting all <p>childs</p> in main
+
+html structure would look like this:
+
+<main>
+
+    p<p>
+    this text is a direct child of main
+    </p>
+
+    <div>
+    this is a section inside main
+      <p> this text is a child of the div section. and it is not a child of main"</p>
+    </div>
+
+    <p>
+    this text is also a direct child of main!
+    </p>
+
+</main>
+`````

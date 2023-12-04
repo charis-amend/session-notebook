@@ -30,16 +30,21 @@ width 50%
 
 OR CALCULATE:
 square big
-width: clacl(100vw-100px)
+width: calc(100vw-100px)
 
 ## in HTML put <img>-tag in a <picture>tag
 
 as soon as the view-port browser window changes the size to more than 1200px (see min width) then it'll show img2 instead of img1.
 
 edit in html doc:
-<picture media='(min-wdith: 1200px)' srcset="img2>
-<img src="img1">
-</picture>
+1200px über 600px.
+ansonsten überschreibt 1200px das 600px wenn es unten steht.
+<picture>
+
+<source media="(min-width: 1200px)" srcset="/img/cat_large.jpg" />
+<source media="(min-width: 600px)" srcset="/img/cat_medium.jpg" />
+    <img src="./img/cat_small.jpg" alt="A cat" />
+  </picture>
 
 ## MEDIA QUERIES different colors for different viewport sizes
 
@@ -57,19 +62,18 @@ if we do mobile first:
 - these root colors will load if the screen is bigger than 800px wide
 - we are working from mobile size to the desktop size
 
-```css
+````css
 @media screen and (min-width: 800px) {
   :root {
     --primary-dark-color: papayawhip;
     --primary-color: tomato;
     --secondary-color: cyan;
-  }
-}
+    }
 /* creating 2 columns because window size is getting bigger from mobile to desktop */
-#quotes-container {
+    #quotes-container {
   grid-template-columns: repeat (2, 1fr);
-}
-```
+ }
+}```
 
 ## light and dark mode
 
@@ -84,7 +88,7 @@ if the browser or device in general is set to dark mode, then it'll load this da
     --secondary-color: gray;
   }
 }
-```
+````
 
 ## accessability reduced motion feature
 
