@@ -1,0 +1,17 @@
+@import './css/variables.css';
+@import './css/card.css';
+@import './css/button.css';
+
+* {
+    box-sizing: border-box;
+    font-family: var(--font-family);
+}
+
+
+h1 {
+    color: var(--primary-color);
+}
+
+header * {
+    display: inline;
+}
