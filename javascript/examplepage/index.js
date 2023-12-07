@@ -36,3 +36,64 @@ amIaNumber += 1;
 console.log("new am i a number value which is 3 += 1:", amIaNumber);
 
 // console.log("Math.PI", Math.PI);
+const giveMeMore = 3;
+amIaNumber += giveMeMore;
+console.log("5. amianumber += givememore", amIaNumber);
+
+// SUBTRACT
+console.log("type of isanumber", typeof isANumber);
+//-> the subtract converts everything to a number
+console.log("isanumber", isANumber);
+console.log("amianumber", amIaNumber);
+
+let subtractexample = amIaNumber - isANumber;
+console.log("subtracting:", subtractexample);
+console.log("type of the subtract example:", typeof subtractexample);
+
+/* OVERVIEW SUM AND SUBTRACT 
+    1. SUM
+        one var is a string
+        one var is a number
+        -- sum adds the two variables together as two strings
+
+    2. SUBTRACT
+        one var is a string
+        one var is a number
+        -- subtract adds the two variables together as two numbers --> doing math!!
+
+*/
+
+const numberString = "10";
+subtractexample = isANumber - numberString;
+console.log("subtraacting isanumber - numberstring", isANumber - numberString);
+console.log("type of the subtractexample", typeof subtractexample);
+
+// how do i know if a number is even?
+// dividing the number by 2 - there should be no remainder
+// remainder=2
+/* Example:
+    10/2=5 --- remainder=0 then even number 
+    11/2=5 --- remainder=1 not a even number
+*/
+
+// symbol for remainder is %
+amIaNumber = 9;
+amIaNumber %= 2;
+console.log("is amIaNumber an even number? this is the remainder:", amIaNumber);
+
+amIaNumber = 10;
+amIaNumber %= 2;
+console.log("is amIaNumber an even number? this is the remainder:", amIaNumber);
+
+// Potentiates
+// (Potenzen 3^3= 3*3*3= 27)
+
+amIaNumber = 2;
+const potentialexample = 2;
+amIaNumber = amIaNumber ** potentialexample; //this would be 2^2
+console.log("the potenze of amianumber:", amIaNumber);
+
+amIaNumber = 4;
+const potentialexample2 = 4;
+amIaNumber = amIaNumber ** potentialexample2; //this would be 4^4 = 4*4*4*4
+console.log("the potenze of amianumber:", amIaNumber);
