@@ -2,7 +2,7 @@
 
 // this was used before 2015
 var oldUse;
-oldUse = "Try not to use it!";
+oldUse = "Try not to use var, instead use const or let!";
 
 // the console lets us print what variables we created
 console.log("old Use: ", oldUse);
@@ -39,7 +39,7 @@ let newVariableforLETexample = "i can change over time";
 // -> do it like this:
 const newVariableWillNotChange = "You are stuck with me!";
 
-// console log is a way to print things in the termin to check if everything is right
+// console log is a way to print things in the terminal to check if everything is right
 console.log("NameOfConstVariableExample", newVariableWillNotChange);
 console.log("NameConstVariableExample description", newVariableWillNotChange);
 
