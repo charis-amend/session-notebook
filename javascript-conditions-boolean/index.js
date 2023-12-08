@@ -28,9 +28,11 @@ number = Math.floor(Math.random() * max);
 // -- means -1 and ++ means +1 !!!!!
 
 // method 2
+console.log("number:", number);
+
 const boolValue = number > 2;
 console.log("boolValue is:", boolValue);
-if (number > 2) {
+if (boolValue) {
   number--;
 } else {
   number++;
