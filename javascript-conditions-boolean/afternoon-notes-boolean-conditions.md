@@ -1,3 +1,5 @@
+// Beware: input values are _always_ strings!
+
 see index.js file
 
 truthy values:
