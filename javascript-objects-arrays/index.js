@@ -115,6 +115,8 @@ const person2 = {
     number: 12,
   },
 };
+// ^ close } exactly on the line where "const" starts!!!!
+
 // maybe log first only the object with all the keys
 console.log(person2);
 // then log the other keys and/or objects in the other object
@@ -125,7 +127,28 @@ person2.age = 55;
 person2.hungry = true;
 // saying one key is the same key
 person2.name = person2.firstname;
-// then deleting
-delete person2.name;
-
+// then deleting person2.name;
 console.log(person2);
+
+// ARRAYS IN AN OBEJCT
+
+const person3 = {
+  name: "charis",
+  age: 78,
+  hobbies: ["soccer", "bike"],
+};
+
+console.log(person3.hobbies[0]);
+// logs soccer
+
+// object in an array - and then an array in that object
+const people = [
+  { name: "person1", hobbies: ["icehockey", "soccer"] },
+  {
+    name: "person2",
+  },
+];
+
+console.log(people[0].hobbies[1]);
+// this logs soccer, because we select the first (0) position in the people array.
+//
