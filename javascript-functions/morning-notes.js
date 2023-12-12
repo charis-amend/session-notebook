@@ -61,6 +61,9 @@ greet("gimena");
 // --------------------------------------
 
 // doing SUMMING
+// can do multiple parameters
+// function printNames(Ute, Flo, Kim) {}
+// function sum(a,b)
 
 function sum(a, b) {
   console.log("the result of the calculation is:", a + b);

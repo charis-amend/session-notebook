@@ -11,7 +11,7 @@ When a web page is loaded, the browser creates a Document Object Model of the pa
 
 The HTML DOM model is constructed as a tree of Objects:
 
-![tree of objects in hmtl]](image.png)
+![tree of objects in hmtl](image.png)
 
 ### with DOM JavaScript gets all the power it needs to create dynamic HTML:
 
