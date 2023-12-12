@@ -62,6 +62,13 @@ console.log(numbers);
 
 // numbers.shift
 
+// overview
+// array.length	            || returns the number of elements in the array
+// array.push(element)	    || adds element to the end of the array
+// array.pop()	            || removes the last element of an array
+// array.unshift(element)	|| adds element as the first element of the array
+// array.shift()	        || removes the first element of the array
+
 // nested arrays:
 const letters = ["a", "b", ["x", "y"]];
 letters[2][1];
