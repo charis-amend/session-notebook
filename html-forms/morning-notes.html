@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1 id="title">Titel of this Form on the Website</h1>
+    <p id="description">
+      <!-- 
+        ACCESSIBILITY 
+        if we put an id tag in the h1 tag and p tag 
+        then we can put it in the form tag with aria-labelledby = title from the h1 title  
+        and the same goes for the p tag and the description we can use the aria-describedby = description 
+        to link the things together for accessibility  -->
+    </p>
+    <!-- 
+        creating a form and defining the input 
+
+        IMPORTANT FOR ACCESSIBILITY!!
+        calling the form a name with aria-labelledby and adding the title from h1 
+    -->
+    <!-- first deleting action when auto-completes form in vs code -->
+    <form aria-labelledby="title">
+      <!-- 
+        FIELDSET & LEGEND 
+
+        IMPORTANT FOR ACCESSIBILITY!!
+        add aria-labelledby 
+        add aria-describedby
+        -->
+      <fieldset aria-describedby="description">
+        <legend>
+          This is the name of the legend for example "Personal Info"
+        </legend>
+        <!-- 
+                    1. creating input tag
+                    2. then creating label 
+                    3. connecting input to label by adding "for="firstname""
+                -->
+        <label for="firstname">First Name</label>
+        <input type="text" name="firstname" id="firstname" />
+
+        <!-- add another form field: -->
+        <label for="lastname">Last Name</label>
+        <input type="text" name="lastname" id="lastname" />
+        <!-- the name is gonna name the input. this is important to get the value from the input later
+            if i dont put anything in name="" then it wont show the entered value in the url
+            -> see screenshot, it only shows the lastname -->
+
+        <!-- EMAIL FIELD
+            also adding validation so only an email address is valid input 
+                put required in input tag so the submit is not possible if no value is entered-->
+        <label for="email">E-Mail</label>
+        <input type="email" name="email" id="email" required />
+
+        <!-- PASSWORD FIELD  
+                dont let the password value be shown in the url!! 
+                this shows in the url atm: 
+                http://127.0.0.1:5501/morning-notes.html?firstname=value-enters-for-firstname&lastname=value-enters-for-lastname&email=value-enters-for-email%40email.com&pass=valueforpassword
+            -->
+        <label for="password">Password</label>
+        <input type="password" name="pass" id="pass" />
+      </fieldset>
+
+      <!-- showing some more inputs -->
+      <fieldset>
+        <legend>More Input types</legend>
+        <!-- DROPDOWN BOX with tag select -->
+        <label for="food"></label>
+        <select name="food" id="food">
+          <!-- you need to put the value inside the value="" AND also put between the options tags the value, so the user can see it -->
+          <option value="pizza">Pizza</option>
+          <option value="pasta">Pasta</option>
+          <!-- in this case user sees burger, but the forms saves salad if value="salad" !!! -->
+          <option value="burger">Burger</option>
+        </select>
+      </fieldset>
+
+      <fieldset>
+        <legend>Spiced or Not</legend>
+        <!-- RADIO BUTTON 
+        for only one choice!!!
+        if you have the same name="" for all the radio inputs then the browser knows its the same section 
+        it only says in the url on/off for the radio button - so add a value -->
+        <label for="hot">Hot</label>
+        <input type="radio" name="spiced" id="hot" value="hot" />
+        <label for="not-hot">Not hot</label>
+        <input type="radio" name="spiced" id="not-hot" value="not-hot" />
+      </fieldset>
+
+      <label for="color">Choose your color</label>
+      <input type="color" name="color" id="color" />
+
+      <!-- SUBMIT BUTTON 
+        !!!! put this at the End!!!!
+                if we do a button we need to pass the content of the button beetween the tags.
+            inside of the form we use the type=submit and then the text that is shown on the button 
+            is defined with value= submit we dont need a label
+            the default behavior of a form is refreshing the page 
+            and 
+            making a get request   -->
+      <input type="submit" value="Submit" />
+    </form>
+  </body>
+</html>
