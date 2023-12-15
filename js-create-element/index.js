@@ -1,11 +1,12 @@
 console.log(document);
 
 // we can change the html via the DOM:
-const form = document.querySelector('[data-js= "card-form"]')
+const form = document.querySelector('[data-js= "card-form"]');
 // with querySelector gives us the nodes = the representation of the html
-const input = document.querySelector('[data-js="text-input"]')
-const cardContainer = document.querySelector('[data-js="card-container"]')
-
+const input = document.querySelector('[data-js="text-input"]');
+const cardContainer = document.querySelector('[data-js="card-container"]');
+// create an clearButton to delete all the new created newCards
+const clearButton = document.querySelector('[data-js="clear-button"]');
 // adding a new card
 // choose the semantic html!! no new names (in this case <li> for list item)
 const newCard = document.createElement("li");
@@ -47,3 +48,10 @@ form.addEventListener("submit", (event) => {
 
 // also possibility to add an eventlistener for a mousemove event
 window.addEventListener("mousemove", event_a)
+
+clearButton.addEventListener("click", () => {
+    // this deletes the textContent because it is "" empty
+    cardContainer.textContent = "";
+    // or reset the whole innerHTML:
+    cardContainer.innerHTML = "";
+});
