@@ -21,8 +21,8 @@ form.addEventListener("submit", (event) => {
     // defining the variable and what it should do:
     const newCard = document.createElement("li");
 
-    // take the classList for the newCard:
-    newCard.classList.add();
+    // put the classList for the newCard inside ():
+    newCard.classList.add( /* here is the class="" from the html doc*/);
 
     // defining the content of the card:
     // newCard.textContent = "this text will be displayed in the card";
