@@ -14,8 +14,8 @@ console.log(string1.toUpperCase());
 // -----------------Inside String Change-------------------------
 
 // to do something indside a string use ${}
-const exampleChanges =
-    "here is alot of text and ${"here is another text"}"
+const exampleChanges = `
+    "here is a lot of text and ${"here is another text"}" `
 
 // -----------------Convert string to number-------------------------
 // unary x 
