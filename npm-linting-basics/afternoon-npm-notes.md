@@ -42,9 +42,13 @@
 
 ## IMPORTANT
 
-- !! -- check creation year of the npm package on website!!
-- !!! -- npm run prettier:check name of the file
-  - this corrects the file and makes it prettier
+> ⚠️ -- check creation year of the npm package on website!!
+>
+> ---
+>
+> ⚠️ -- npm run prettier:check name of the file
+>
+> this corrects the file and makes it prettier
 
 ## UNINSTALL NPM
 
