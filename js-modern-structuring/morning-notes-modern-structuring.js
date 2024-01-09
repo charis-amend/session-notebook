@@ -19,7 +19,7 @@ const age = person.age
 const { name, age } = person;
 
 // adding an alias "personname" which is then a variable
-const { name: personname, age, x = 7, { street: streetFromAdress } } = person
+const { name: personname, age, x = 7, { street: streetFromAddress } } = person
 // logs x = 10 instead of x = 7 because the priority is the object and not the alias!
 
 const { name, ...rest } = person
