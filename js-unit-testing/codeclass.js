@@ -2,6 +2,8 @@
 
 // 1. in package.json check for jest 
 // look for "jest@--watch all" then it tst the doc
+//  "test": "cross-env NODE_OPTIONS=--experimental-vm-modules npx -y jest@latest --watchAll"
+
 // 2. create separate file greet.test.js aand import function file.js to the test.js file
 
 // 3. in the test.js file import the greet.js file with the function we want to test.
@@ -20,6 +22,7 @@ test('returns "hello!" if function greet(hello) with the parameter/value Hello w
 // test driven development TDD = the test are driving the developemnt. 
 
 // 1. writing a test for the feature-function
+// ---> add not the real data, but an example data
 // 2. it fails - the feature is not there yet
 // 3. then write the feature-function
 // 4. then run test 
