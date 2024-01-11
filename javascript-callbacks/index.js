@@ -28,7 +28,7 @@ saveButton.addEventListener("click", function () {
 // named Callback
 
 // 1----hardcoded value: 
-cancelButton, addEventListener("click", onCancel)
+cancelButton.addEventListener("click", onCancel)
 // this is finished! no  {}
 
 // this is the function named Button 
@@ -39,7 +39,7 @@ function Button() {
 }
 
 // 2----dynamic version:
-cancelButton, addEventListener("click", onCancel)
+cancelButton.addEventListener("click", onCancel)
 
 // this is the function named Button 
 function Button() {
