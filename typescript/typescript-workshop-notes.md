@@ -12,7 +12,8 @@
 - in js i can have an array with different typeof for each element
 - arrays:
   - but in ts i am not allowed to have different typeofs in a variable AND arrays
-- type
+- no type set for something it is an error!
+- no type set in typescript is similar to undefined in js
 
 #### special features in typescript
 
