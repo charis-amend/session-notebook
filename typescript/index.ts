@@ -7,6 +7,9 @@ let variableA: number = 123;
 const arr: string[];
 // need to specify the default value!
 const arr: string[] = [];
+// if you need an array with different values
+// not good approach, create rather a custom type
+let myArray: (number | string)[] = [123, "12"];
 
 // --- OBJECTS
 type User = {
@@ -26,6 +29,14 @@ const user: User = {
   id: 123,
 };
 
+// --- TYPE
+// not typeof ;)
+
+type LoggedInUserID = number | undefined;
+const currentUserId: LoggedInUserID = 123;
+const currentUserId: LoggedInUserID = undefined;
+// can be 2 types number and undefined
+
 // --- INTERFACE
 // interface and type are almost identical, BUT
 // interfaces can be extended and add another item
@@ -37,4 +48,30 @@ interface User {
 }
 interface User {
   email: "email";
+}
+interface LoggedInPerson {
+  isLoggedIn: boolean;
+}
+
+// --- CUSTOM UNION TYPES
+
+type salutation = "hello" | "hi" | "good morning";
+
+let variable: salutation = "hello";
+// custom type is salutation
+// only hello, hi or good morning possible to be the variables content
+
+// the variable user should have both types (User andd LoggedInPerson)
+const user: User & LoggedInPerson {
+  name: "sven",
+  email: "",
+  isLoggedIn: true,
+  id: 1243
+}
+
+// --- FUNCTIONS
+// function add(firstargument: number, secondargument: number): number
+function add(a: number, b: number): number //return must be number 
+{ // it must return the type number
+  return a + b
 }
