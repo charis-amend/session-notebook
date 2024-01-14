@@ -30,7 +30,7 @@ animateButton.addEventListener("click", () => {
 // in the console (broswer) check:
 // PromiseState is "fulfilled" to check if promise function was successful
 
-animateButton2.addEventListener("click", () => {
+animateButton.addEventListener("click", () => {
     animateButton.disabled = true;
 
     // giving a promise to the computer that i will return once time is run out and then returning the promised object
@@ -38,9 +38,9 @@ animateButton2.addEventListener("click", () => {
     await animateBall(basketball);
     await animateBall(tennisball);
     // usw...
-};
-console.log(soccerPromise);
-animateButton.disabled = false;
+
+    console.log(soccerPromise);
+    animateButton.disabled = false;
 })
 
 // async functions up close: 
@@ -62,7 +62,7 @@ myFunction().then((result) => {
 (async myFunction() {
     const result = await myFunction()
     console.log(result);
-}) ()
+})
 
 async function myFunction() {
     throw new Error('Something went wrong!')
