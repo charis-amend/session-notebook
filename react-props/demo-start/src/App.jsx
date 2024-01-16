@@ -3,7 +3,7 @@ import Pet from "./Pet.js";
 import "./styles.css";
 
 export default function App() {
-  function handleAnimal(animal) {
+  function handleAnimal() {
     console.log(`Hello ${name}, said ${sound}`)
   }
 
