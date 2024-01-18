@@ -98,3 +98,37 @@ function FoodOrder() {
         </>
     );
 }
+
+
+
+
+
+
+function ExampleComponent({ Header, Nav }) {
+    function Header() {
+        return (
+            <header>
+                <h1>Hello world!</h1>
+            </header>
+        );
+    }
+    function Nav() {
+        return (
+            <nav>
+                <a href="/html/">HTML</a> |<a href="/css/">CSS</a> |
+                <a href="/js/">JavaScript</a> |<a href="/python/">Python</a>
+            </nav>
+        );
+    }
+    // and then...
+    const nav = Nav();
+    console.log(nav);
+    return (
+        <section>
+            <Header />
+            {/* Another way to call the function/component */}
+            {Nav()}
+        </section>
+    );
+}
+ExampleComponent();
