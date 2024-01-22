@@ -71,7 +71,7 @@ export default function Joke() {
             console.log("click")
         }
         document.querySelector("button").addEventListener("click", handleClick)
-        return () => button.removeEventListener("click", handleClick)
+        return () => { button.removeEventListener("click", handleClick) }
     })
 
     return (
