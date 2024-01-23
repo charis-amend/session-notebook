@@ -1,6 +1,6 @@
 import "./Form.css";
 
-export default function Form() {
+export default function Form({ onAddMovie }) {
   function handleSubmit(event) {
     event.preventDefault();
     const formData = new FormData(event.target);
