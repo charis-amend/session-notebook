@@ -1,5 +1,8 @@
 // how to do dynamic routing
 
+// 1. create a [slug].js file in parent folder [slug]
+// in this case in folder /pages/movies/[slug]
+
 // we can create a page without actually creating a page
 // we can do static pages (hardcoded and a file)
 // server-side/dynamic pages -> it only creates the page whenever the user clicks on it
@@ -7,11 +10,11 @@
 // have a const movieData with a lot of movie-objects
 // using the useRouter from next/router
 import { useRouter } from "next/router"
-// 
 
 export default function CurrentMoviePage() {
     // checking what useRouter() returns:
     const router = useRouter()
+    const { slug } = router.query
     console.log(router);
 
     // "find the currentMovie in movies which has the slug of the selected movie. 

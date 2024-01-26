@@ -60,8 +60,8 @@
 
 2. importing animals data from .json file
 3. import head default
-4. instead of `<a>` anker tag we should use Link component!!
-5. next.js renders everything faster (pre-loading images), so it has a image component in the index.js main homepage there is a default `<image>`
+4. instead of `<a>` anker tag we should use the default `<Link>` component!!
+5. next.js renders everything faster (pre-loading images), so it has a image component in the index.js main homepage there is a default `<Image>`
 6. EXTRA SECURITY IMPORT
 
 importing an image from the outside (src outside of api), have to tell NextJS that it is ok to allow this image
@@ -94,6 +94,8 @@ export default function Animals() {
       <main>
         <h1>List of Animals</h1>
         <section className={styles.cardsSection}>
+          {/* adding a key={} for REACT/NEXTJS to connect it with the 
+           dataAnimals list and defining an ID/Key for a selected element */}
           {dataAnimals.map((animal, nameOfKey) => (
             <Link
               href={`/animals/${animal.name.toLowerCase()}`}
@@ -140,9 +142,5 @@ return (
     </>
 );
 }
-
-```
-
-```
 
 ```
