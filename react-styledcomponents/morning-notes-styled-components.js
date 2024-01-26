@@ -26,9 +26,7 @@ export default function App({ Component, pageProps }) {
     );
 }
 
-
-
-
+// ---- HOW TO --------
 // 1. use .js file
 // 2. To create a styled component:
 import styled from "styled-components";
