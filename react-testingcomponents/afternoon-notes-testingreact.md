@@ -2,6 +2,16 @@
 
 `npm install --save-dev @testing-library/react`
 
+do this for test.index.js if index.js uses useRouter() from next:
+
+```js
+jest.mock("next/router", () => ({
+  useRouter() {
+    return { pathname: jest.fn() };
+  },
+}));
+```
+
 ### types of testing
 
 1. npm linting
@@ -35,7 +45,7 @@ test("renders a movie", () => {
     // rendering the Movie-component for the prop ({name})
     render(<Movie name="The Matrix" />)
     // get me an element where the text element is The Matrix, return value is hmtl
-    const matrixHeading screen.getByTest("The Matrix")
+    const matrixHeading = screen.getByText("The Matrix")
     // defining what should be there
     expect(matrixHeading).toBeInTheDocument()
 });
@@ -54,7 +64,7 @@ const matrixHeading screen.getByRole("heading", {name: "The Matrix", level: 2})
     <div role="heading" aria-level="2">Second Heading Level Two</div>
 ```
 
-**another test**
+**final test**
 
 ```js
 test("renders a mneww movie when the form is submitted with a new movie name", async () => {
