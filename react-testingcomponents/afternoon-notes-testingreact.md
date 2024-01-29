@@ -83,11 +83,13 @@ test("renders a mneww movie when the form is submitted with a new movie name", a
   const button = screen.getByRole("button", { name: "Add" });
   await user.click(button);
 
-    // check if the new added movie is showing up in the simulation test:
-  const matrixHeading screen.getByRole("heading", {name: "The Matrix", level: 2})
+  // check if the new added movie is showing up in the simulation test:
+  const matrixHeading = screen.getByRole("heading", {
+    name: "The Matrix",
+    level: 2,
+  });
 
   // need an expect()
   expect(matrixHeading).toBeInTheDocument();
 });
-
 ```
