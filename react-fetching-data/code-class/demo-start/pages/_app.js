@@ -1,8 +1,8 @@
 import GlobalStyle from "../styles";
 import { SWRConfig } from "swr";
 
-const { data, error, isValidating, isLoading } = useSWR(`https://example-apis.vercel.app/api/bad-jokes/${id}`, fetcher);
-
+// in _app.js file: 
+const fetcher = (url) => fetch(url).then((response) => response.json())
 export default function App({ Component, pageProps }) {
   return (
     <>
