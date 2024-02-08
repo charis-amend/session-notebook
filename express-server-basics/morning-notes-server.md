@@ -3,7 +3,7 @@
 - server === machine running something
 - client is the users device/machine
 - has these files:
-  - they are hosted on the server
+  - they are created and hosted on the server
   - and then executed on client side
     - index.js
     - index.html
@@ -19,8 +19,9 @@ Today we'll build our own.
 
 #### inside the server:
 
-- webserver
-- hardrive / database
+- webserver (makes requests to the database)
+- hardrive
+- database
 - we can access also other remote locations
 
 ### executing JS in RUNTIME ENVIRONMENT
@@ -76,17 +77,152 @@ Today we'll build our own.
 
 # SERVER-SIDE RENDERING
 
--> source code not server with react frameworks
+-> source code has not a server with react frameworks
 -> google is looking at the view-source document and there is nothing there
 
 - look at document:
   - `view-source:localhost:3000`
-  - index.html only references the inidex.js bundle file
+  - index.html only references the index.js bundle file
     -> then created next.js, which is supports server-side rendering
     -> next.js gives Google (SEO) the fully pre-rendered website
+    -> next.js is running its own server
 
 ### -> keep client-side rendering as small as possible!!
 
 example:
 webshop with 10000 tshirts
 all tshirts should be rendered on the server side, otherwise the clients internet and device will be overloaded a lot!
+
+#
+
+# Creating a Server Application
+
+1. Create an app from scratch using `npm init`
+
+## Example route: GET / - root route, returning text
+
+This tells the server to respond to a specific request for the root route
+It sends a plain text response -- this is not HTML!
+so then do this in index.js file:
+
+```js
+app.get("/", (request, response) => {
+  // Logged in the terminal on the SERVER side
+  console.log("Someone wants the root route!");
+  // Sent to the client (visible in the browser window)
+  response.send("Welcome to our site! 😎");
+});
+```
+
+in the view-source localhost it only shows the string above!!
+--> Welcome to our site! 😎
+in browser dev console:
+
+GENERAL:
+
+- request URL localhost 3000
+- reqeuest Method is GET
+- status code 200 ok
+
+RESPONSE HEADERS:
+
+- content length
+- content type
+- date, time, ...
+  > this is only the stuff shown on the server side
+
+## Example route: GET / - returning HTML
+
+1. creating html file
+2. instead of the string we would like tto send back the content of the html file
+3. very important:
+   1. specificy the path of the local created server
+   2. we need the absolute path of the current directory!
+   3. import path module:
+      import path from "path"
+   4. then create variable:
+      `const directoryName = path.directoryName(new URL (import.meta.url)`
+      `console.log(directoryName)`
+      `res.sendFile(path.join(directoryName, "index.html"));`
+
+## Example route: GET / - returning about.json file
+
+> req = request
+> res = response
+
+```js
+const about = {content of json file}
+app.get("/about.json", (req, res) => {
+res.json(about)
+})
+```
+
+## Example route: GET /staff/:name with a variable/parameter
+
+- Instead of creating many routes for exact paths, we could create a route with a variable part: a placeholder for any value!
+- This saves us the difficulty of maintaining many specific routes
+
+```js
+const name = req.params.person;
+app.get("/staff/:person", (req, res) => {
+  // Get the actual value sent for the parameter from `req.params`
+  res.json({
+    name: name,
+    description: `${name} is a valued employee here are our company!`,
+  });
+});
+```
+
+## POSTING to the server - receive the contact form, redirect to /
+
+1. need to create a route but with contact form!
+   `const directoryName = path.directoryName(new URL (import.meta.url)`
+   `console.log(directoryName)`
+   `res.sendFile(path.join(directoryName, "contact-form.html"));`
+
+2. we need a post request and not a get request.
+3. so changing the form method
+   `<form method="POST"`
+4. but it still returns a 404 error
+5. so then use this:
+   `app.use(express.urlencoded())`
+6. refer to the form data:
+   `console.log(req.body.message)`
+7. can also use
+   `res.redirect()`
+8. other person wont see the console log in browser, only in the terminal
+
+## Server side methods:
+
+1. GET
+2. POST
+3. PUT / PATCH
+4. DELETE
+5. HEAD
+
+i can do a GET / request in terminal:
+
+- then i receive the header information about html document
+- AND then displays the html doc
+
+i can do a HEAD/ request in terminal:
+
+- it only displays the header information about a html document
+
+#### why using POST to transfer data and not GET???
+
+---> post requests are NOT CACHED!!!
+whenever we add data anddd create a resource on server side we need to use something else then GET!!!
+for example POST
+
+- in case we have url called search?filter=shirts&price=50...
+- something between server and client needs to cache data
+- user 1 is going to shop page
+- server shows all the shiirts
+- then user 2 needs all shirts
+- server knows there is no change in shirts between user1 and user2
+- so server caches all of the shirts in a MEMORY STORAGE (CACHE)
+- then it quickly can display the shirts for both users.
+-
+-
+-
