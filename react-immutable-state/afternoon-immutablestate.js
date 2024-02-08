@@ -72,7 +72,7 @@ function handleToggleHasSeen(seasonNumber, episodeNumber) {
             // need to map again, because inside the the seasons, there is another array with objects with the episodes
             return {
                 ...season,
-                episodes: season.epddisodes.map((episode) => {
+                episodes: season.episodes.map((episode) => {
                     if (episode.number !== episodeNumber) {
                         return episode;
                     }
