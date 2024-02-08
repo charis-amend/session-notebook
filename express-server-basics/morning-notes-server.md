@@ -194,10 +194,12 @@ app.get("/staff/:person", (req, res) => {
 
 ## Server side methods:
 
-1. GET
-2. POST
-3. PUT / PATCH
-4. DELETE
+// request methods // CRUD backend methods
+
+1. GET --- READ
+2. POST --- CREATE
+3. PUT / PATCH --- UPDATE
+4. DELETE --- DELETE
 5. HEAD
 
 i can do a GET / request in terminal:
