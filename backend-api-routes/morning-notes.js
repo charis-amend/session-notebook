@@ -97,9 +97,12 @@ export default function handler(request, response) {
 // in JOKE COMPONENT components/joke/index.js 
 // changing a joke with POST method:
 
-input here code from class!
-
-
+return (
+    <>
+        <small>ID: {id}</small>
+        <h1>{data.joke} </h1>
+        <Link href="/">Back to all</Link>
+    </>)
 
 // ---------------- Static routes --------------------
 // Create static route by creating a new file under pages/api/jokes/index.js:
