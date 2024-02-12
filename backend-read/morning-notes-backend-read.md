@@ -7,7 +7,7 @@ database <--> server (/api folder) <--> browser
 
 ## mongoose
 
-=== is a so called "ODM"
+=== That's an ODM (Object Document Mapper).
 
 - maps the database
 - transforms data in object to work with
@@ -15,6 +15,26 @@ database <--> server (/api folder) <--> browser
 - we can model the data how we want it
 - prevents mistakes
 - modeling with nodeJS
+
+#### Reasons to use mongoose as ORM:
+
+It helps building a schema and querying the database (it's also our db driver).
+It has to run on the server, because database access is not secure in the browser.
+Remember: We already have a server (= Next.js API routes).
+
+## Difference between ORM and ODM
+
+#### ORM (Object Relation Mapping):
+
+- technique to perform CRUD operations to mainly relational databases (MySQL, PostgreSQL, etc.),
+- uses an object-oriented paradigm
+- like excel spreadsheet with rows and columns => you cannot add a field to one entry that doesn't exist for all
+  is mapped to a single object for all entries.
+
+#### ODM (Object Document Mapping):
+
+- like ORM for non-relational databases (MongoDB)
+- uses a document-oriented paradigm
 
 ## process example from class
 
@@ -47,7 +67,8 @@ export default Joke;
 6. create connect.js in "/db" folder.
 7. in "connect.js":
    1. copy-paste MONGODB_URI from NEXTJS Documentation
-   2. function dbConnect makes the connection possible between our server (/api) and mongoose.
+   2. https://github.com/spiced-academy/coriander-web-dev/blob/main/sessions/backend-read/assets/connect.js
+   3. function dbConnect makes the connection possible between our server (/api) and mongoose.
 
 ---- now connection from mongoose to database ----
 
@@ -65,6 +86,8 @@ export default Joke;
 13. mongoDB calls its IDs with **\_id:**
 
 14. create ".env.local" file in root
+15. Files called .env contain environment variables: secrets like usernames and passwords
+16. These files should be ignored by git inside of the .gitignore file.
 
 ```js
 MONGODB_URI=//mongodb+srv://.....see the link on mongoDB profile
@@ -141,7 +164,8 @@ export default async function handler(request, response) {
 
         // in case of an error:
         if(!joke) {
-        return response.status(404).json({"joke not found"})}
+        return response.status(404).json({"joke not found"})
+}
         response.status(200).json(joke)
 }
 ```
