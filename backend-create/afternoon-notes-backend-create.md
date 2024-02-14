@@ -31,12 +31,12 @@ method: POST
 
 ```js
 // 1. add method POST
-if(request.method === "POST") {
-// get the joke data -> with request and request the body:
-    const jokeData =  request.body
-    await Joke.create(jokeData)
-// 2. returning Meldung, if it worked:
-    return response.status(200).json({status: joke created})
+if (request.method === "POST") {
+  // get the joke data -> with request and request the body:
+  const jokeData = request.body;
+  await Joke.create(jokeData);
+  // 2. returning Meldung, if it worked:
+  return response.status(200).json({ status: "joke created" });
 }
 ```
 
@@ -53,7 +53,7 @@ export default function JokeForm() {
       headers: {
         "Content-Type": "application/json",
       },
-      body,
+      body: JSON.stringify("name of variable from new created formdata"),
     });
   };
 
