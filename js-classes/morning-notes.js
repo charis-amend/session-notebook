@@ -1,10 +1,18 @@
 // JS Classes
 // object oriented programming
 // (in Java its all about classes)
+
+// classes are BLUEPRINTS for objects
+
+
 // ------------------------------
 super() // calls items from parent
 super.makeSound() // calls functions from parent
 // ------------------------------
+
+
+
+
 
 const sven = new Person() // this Person class i have to create new
 const now = new Date() // Date already exists
